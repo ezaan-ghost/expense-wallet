@@ -1,4 +1,4 @@
-# 🌿 Ivy Expense
+# 🌿 Expense-Wallet
 
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg?logo=android&logoColor=white)]()
 [![Language](https://img.shields.io/badge/Language-Kotlin-purple.svg?logo=kotlin&logoColor=white)]()
@@ -6,9 +6,9 @@
 [![Design](https://img.shields.io/badge/Design-Material%203-emerald.svg)]()
 [![License](https://img.shields.io/badge/Security-100%25%20On--Device%20Local-blue.svg)]()
 
-**Ivy Expense** is a premium personal finance, budget, and transaction manager inspired by the elegant layout of Ivy Wallet. Built entirely with **Kotlin** and **Jetpack Compose (Material Design 3)**, Ivy Expense is designed with an elegant dark "Slate" aesthetic that pairs responsive animations with localized storage, putting privacy and performance first.
+**Expense-Wallet** is a premium personal finance, budget, and transaction manager inspired by the elegant layout of Ivy Wallet. Built entirely with **Kotlin** and **Jetpack Compose (Material Design 3)**, Expense-Wallet is designed with an elegant dark "Slate" aesthetic that pairs responsive animations with localized storage, putting privacy and performance first.
 
-Unlike traditional cloud-tethered money managers, Ivy Expense keeps 100% of your data **strictly on-device**. Your financial records belong only to you.
+Unlike traditional cloud-tethered money managers, Expense-Wallet keeps 100% of your data **strictly on-device**. Your financial records belong only to you.
 
 ---
 
@@ -55,7 +55,7 @@ Unlike traditional cloud-tethered money managers, Ivy Expense keeps 100% of your
 
 ## 🛠️ Architecture and Stack
 
-Ivy Expense uses industry-standard Android architecture patterns to guarantee safety and performance:
+Expense-Wallet uses industry-standard Android architecture patterns to guarantee safety and performance:
 
 * **Jetpack Compose**: Declarative, responsive UI layer using dynamic compositions.
 * **Room Database**: Offline persistence engine leveraging local SQLite tables with indexing.
