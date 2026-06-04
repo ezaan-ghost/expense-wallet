@@ -75,8 +75,8 @@ Expense-Wallet uses industry-standard Android architecture patterns to guarantee
 ### Build & Run
 First, clone the repository locally:
 ```bash
-git clone https://github.com/yourusername/ivy-expense.git
-cd ivy-expense
+git clone https://github.com/ezaan-ghost/expense-wallet.git
+cd expense-wallet
 ```
 
 Verify or run build checks directly from the command line:
