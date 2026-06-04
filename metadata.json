@@ -1,0 +1,6 @@
+{
+  "name": "Ivy Expense",
+  "description": "A premium offline personal finance and expense manager inspired by Ivy Wallet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
