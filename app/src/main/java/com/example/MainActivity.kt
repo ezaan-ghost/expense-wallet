@@ -200,7 +200,7 @@ fun MainAppScreen(viewModel: ExpenseViewModel = viewModel()) {
                             )
                         }
                         Text(
-                            text = if (userName.isNotBlank()) "$userName's Ledger" else "Ivy Expense",
+                            text = if (userName.isNotBlank()) "$userName's Ledger" else "Expense Wallet",
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
                             color = ElegantOnBackground,
@@ -445,7 +445,7 @@ fun MainAppScreen(viewModel: ExpenseViewModel = viewModel()) {
                             modifier = Modifier.padding(bottom = 32.dp)
                         ) {
                             androidx.compose.foundation.Image(
-                                painter = androidx.compose.ui.res.painterResource(id = R.drawable.ledger_icon_1780509849491),
+                                painter = androidx.compose.ui.res.painterResource(id = R.drawable.app_logo_wallet_1780750581081),
                                 contentDescription = "Logo",
                                 modifier = Modifier
                                     .size(38.dp)
@@ -453,7 +453,7 @@ fun MainAppScreen(viewModel: ExpenseViewModel = viewModel()) {
                                 contentScale = androidx.compose.ui.layout.ContentScale.Crop
                             )
                             Text(
-                                text = if (userName.isNotBlank()) userName else "Ivy Menu",
+                                text = if (userName.isNotBlank()) userName else "Wallet Menu",
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = ElegantOnBackground,
@@ -2623,7 +2623,7 @@ fun ReportsTabContent(
                         Toast.makeText(context, "No transactions found to export CSV!", Toast.LENGTH_SHORT).show()
                     } else {
                         val csv = generateCsvString(filteredTransactions, categories, accounts)
-                        shareTextReport(context, csv, "Ivy_Expense_Report.csv")
+                        shareTextReport(context, csv, "Expense_Wallet_Report.csv")
                     }
                 },
                 modifier = Modifier.weight(1f),
@@ -2701,7 +2701,7 @@ fun shareTextReport(context: android.content.Context, contentText: String, title
         putExtra(android.content.Intent.EXTRA_SUBJECT, title)
         putExtra(android.content.Intent.EXTRA_TEXT, contentText)
     }
-    context.startActivity(android.content.Intent.createChooser(intent, "Share Ivy Expense Report"))
+    context.startActivity(android.content.Intent.createChooser(intent, "Share Expense Wallet Report"))
 }
 
 // Native Print adapter helper
@@ -2711,8 +2711,8 @@ fun printHtmlReport(context: android.content.Context, htmlContent: String) {
         webView.webViewClient = object : android.webkit.WebViewClient() {
             override fun onPageFinished(view: android.webkit.WebView?, url: String?) {
                 val printManager = context.getSystemService(android.content.Context.PRINT_SERVICE) as android.print.PrintManager
-                val printAdapter = webView.createPrintDocumentAdapter("Ivy_Expense_Report")
-                val jobName = "Ivy Expense Report Document"
+                val printAdapter = webView.createPrintDocumentAdapter("Expense_Wallet_Report")
+                val jobName = "Expense Wallet Report Document"
                 printManager.print(jobName, printAdapter, android.print.PrintAttributes.Builder().build())
             }
         }
@@ -2756,7 +2756,7 @@ fun generateHtmlString(txs: List<Transaction>, cats: List<Category>, accs: List<
         </style>
         </head>
         <body>
-            <h1>Ivy Expense Secure statement</h1>
+            <h1>Expense Wallet Secure statement</h1>
             <div class="meta">Export Type: $typeFiltered | Created on: ${SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(Date())}</div>
             <table>
                 <tr>
@@ -2971,7 +2971,7 @@ fun PinVerificationScreen(
                 )
 
                 val promptInfo = BiometricPrompt.PromptInfo.Builder()
-                    .setTitle("Ivy Vault Lock")
+                    .setTitle("Secure Vault Lock")
                     .setSubtitle("Confirm fingerprint or face ID to unlock")
                     .setNegativeButtonText("Use Passcode PIN")
                     .build()
@@ -3006,7 +3006,7 @@ fun PinVerificationScreen(
             )
 
             Text(
-                text = "Ivy Vault Locked",
+                text = "Secure Vault Locked",
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold,
                 color = ElegantOnBackground
@@ -3559,7 +3559,7 @@ fun SettingsTabContent(
                         Button(
                             onClick = {
                                 val stringExport = viewModel.exportBackup()
-                                shareTextReport(context, stringExport, "My_Ivy_Budget_Backup.json")
+                                shareTextReport(context, stringExport, "My_Expense_Wallet_Backup.json")
                                 Toast.makeText(context, "JSON backup exported and shareable!", Toast.LENGTH_SHORT).show()
                             },
                             modifier = Modifier.weight(1f),
@@ -4487,7 +4487,7 @@ fun OnboardingWelcomeScreen(
             ) {
                 // Brand Logo Image Decoration
                 androidx.compose.foundation.Image(
-                    painter = androidx.compose.ui.res.painterResource(id = R.drawable.ledger_icon_1780509849491),
+                    painter = androidx.compose.ui.res.painterResource(id = R.drawable.app_logo_wallet_1780750581081),
                     contentDescription = "Wallet Logo",
                     modifier = Modifier
                         .size(108.dp)
